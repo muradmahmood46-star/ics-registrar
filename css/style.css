@@ -1792,6 +1792,18 @@ footer {
     line-height: 1.5;
   }
 
+  .mission-vision-copy {
+    gap: 0.5rem;
+  }
+  .mv-block {
+    padding: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .mv-block p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
   .about-visual {
     min-height: 280px;
   }
