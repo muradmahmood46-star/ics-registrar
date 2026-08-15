@@ -483,7 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         y: 25,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.45,
         ease: "power2.out"
       });
     });
@@ -498,7 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         y: 35,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.45,
         delay: (index % 3) * 0.1,
         ease: "power2.out"
       });
