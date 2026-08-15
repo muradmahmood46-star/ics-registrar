@@ -549,4 +549,25 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => ScrollTrigger.refresh());
     window.addEventListener("orientationchange", () => ScrollTrigger.refresh());
   }
+
+  // Touch device "Click to Hover" support
+  const touchCards = document.querySelectorAll('.service-card, .mv-block, .team-card');
+  touchCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+      if (window.innerWidth <= 1024) {
+        touchCards.forEach(c => {
+          if (c !== this) c.classList.remove('is-hovered');
+        });
+        this.classList.toggle('is-hovered');
+      }
+    });
+  });
+
+  // Remove hover on click outside
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth <= 1024 && !e.target.closest('.service-card, .mv-block, .team-card')) {
+      touchCards.forEach(c => c.classList.remove('is-hovered'));
+    }
+  });
+
 });

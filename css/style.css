@@ -20,6 +20,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -141,9 +142,9 @@ h3 {
 
 .utility-left {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.95rem;
-  font-size: 0.8rem;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  font-size: 0.72rem;
 }
 
 .utility-social,
@@ -758,16 +759,16 @@ h3 {
   transform-origin: center;
 }
 
-.mv-block:hover {
+.mv-block:hover, .mv-block.is-hovered {
   transform: translateY(-8px);
   border-color: rgba(15, 43, 36, 0.12);
 }
 
-.mv-block:hover::after {
+.mv-block:hover, .mv-block.is-hovered::after {
   opacity: 1;
 }
 
-.mv-block:hover::before {
+.mv-block:hover, .mv-block.is-hovered::before {
   transform: scaleX(1);
 }
 
@@ -1032,16 +1033,16 @@ h3 {
   transform-origin: center;
 }
 
-.service-card:hover {
+.service-card:hover, .service-card.is-hovered {
   transform: translateY(-8px);
   border-color: rgba(15, 43, 36, 0.12);
 }
 
-.service-card:hover::after {
+.service-card:hover, .service-card.is-hovered::after {
   opacity: 1;
 }
 
-.service-card:hover::before {
+.service-card:hover, .service-card.is-hovered::before {
   transform: scaleX(1);
 }
 
@@ -1153,30 +1154,30 @@ h3 {
   transition: transform 0.3s ease;
 }
 
-.service-card:hover .service-icon {
+.service-card:hover, .service-card.is-hovered .service-icon {
   background: var(--color-accent);
   color: #fff;
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 8px 20px rgba(232, 100, 28, 0.3);
 }
 
-.service-card:hover .service-seal {
+.service-card:hover, .service-card.is-hovered .service-seal {
   background: var(--color-accent);
   color: #fff;
   border-color: var(--color-accent);
   transform: rotate(45deg);
 }
 
-.service-card:hover h3 {
+.service-card:hover, .service-card.is-hovered h3 {
   color: var(--color-accent);
 }
 
-.service-card:hover .service-read-more {
+.service-card:hover, .service-card.is-hovered .service-read-more {
   background: var(--color-ink);
   box-shadow: 0 6px 20px rgba(15, 43, 36, 0.4);
 }
 
-.service-card:hover .service-read-more span {
+.service-card:hover, .service-card.is-hovered .service-read-more span {
   transform: translateX(8px);
 }
 
@@ -1719,15 +1720,6 @@ footer {
     opacity: 0.9;
   }
 
-  .about-visual {
-    grid-column: 1 / 7;
-    min-height: 520px;
-  }
-
-  .about-copy {
-    grid-column: 7 / 13;
-  }
-
   .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1802,8 +1794,23 @@ footer {
     min-height: 92px;
   }
 
-  .services-grid {
+  .about-visual {
+    grid-column: 1 / 6;
+    min-height: 520px;
+  }
+
+  .about-copy {
+    grid-column: 7 / 13;
+  }
+
+  .mission-vision-copy {
+    grid-column: 1 / -1;
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
