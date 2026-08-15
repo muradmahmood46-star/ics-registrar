@@ -1837,6 +1837,10 @@ footer {
     font-size: 0.65rem;
   }
 
+  .why-layout p {
+    text-align: justify;
+  }
+
   .footer-bottom {
     flex-direction: column;
     align-items: center;
