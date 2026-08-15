@@ -1684,18 +1684,13 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   gap: 0.9rem;
   font-size: 0.78rem;
 }
 
-.footer-center-text {
+.footer-bottom div {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
-  flex: 1;
+  gap: 3.5rem; /* Increased gap to push Contact Us slightly to the right */
 }
 
 @media (min-width: 480px) {
@@ -1909,32 +1904,21 @@ footer {
   }
 
   .footer-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 1rem;
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .footer-link-left {
-    grid-column: 1 / 2;
-    text-align: left;
-  }
-  .footer-link-right {
-    grid-column: 2 / 3;
-    text-align: right;
-  }
-  .footer-center-text {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .footer-center-text > p:first-child {
+  .footer-bottom > p:first-child {
+    order: 3;
+    margin-top: 0.5rem;
     font-size: 0.65rem;
+  }
+  .footer-bottom > .footer-credit {
     order: 2;
   }
-  .footer-center-text > .footer-credit {
+  .footer-bottom > div {
     order: 1;
+    gap: 1.5rem;
   }
 }
 
