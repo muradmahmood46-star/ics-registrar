@@ -1851,16 +1851,12 @@ footer {
 
   .mission-vision-copy {
     gap: 0.5rem;
-    width: auto;
-    margin-left: -1rem;
-    margin-right: -1rem;
   }
   .mv-block {
-    padding: 1.2rem 1rem;
+    padding: 1.5rem 1.2rem;
     margin-bottom: 0.5rem;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
+    border-radius: 12px;
+    border: 1px solid rgba(243, 146, 0, 0.15);
   }
   .mv-block p {
     font-size: 0.95rem;
