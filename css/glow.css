@@ -1,0 +1,145 @@
+/* ============================================
+   ICS Registrar - Orange Glowing Circles
+   Separate file for glowing ring effects
+   ============================================ */
+
+/* ---------- Orange Glow Animation Keyframe ---------- */
+
+@keyframes orangeGlowPulse {
+  0% {
+    box-shadow:
+      0 0 12px rgba(232, 100, 28, 0.45),
+      0 0 24px rgba(232, 100, 28, 0.25),
+      inset 0 0 8px rgba(232, 100, 28, 0.15);
+    border-color: rgba(232, 100, 28, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 24px rgba(232, 100, 28, 0.75),
+      0 0 48px rgba(232, 100, 28, 0.45),
+      inset 0 0 14px rgba(232, 100, 28, 0.3);
+    border-color: rgba(232, 100, 28, 1);
+  }
+  100% {
+    box-shadow:
+      0 0 12px rgba(232, 100, 28, 0.45),
+      0 0 24px rgba(232, 100, 28, 0.25),
+      inset 0 0 8px rgba(232, 100, 28, 0.15);
+    border-color: rgba(232, 100, 28, 0.7);
+  }
+}
+
+/* ---------- Glowing Circle Around Pic 1 (About Section Main Image) ---------- */
+
+.about-visual img:first-child {
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--color-accent);
+  animation: orangeGlowPulse 3s ease-in-out infinite;
+}
+
+/* ---------- Glowing Circle Around Pic 2 (About Section Bottom-Right Image) ---------- */
+
+.about-visual img:nth-child(2) {
+  z-index: 2;
+  border: 3px solid var(--color-accent);
+  animation: orangeGlowPulse 3.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* ---------- Glow Ring Expansion Effect (orbit ring behind images) ---------- */
+
+.about-visual::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 1.5rem);
+  width: min(80vw, 460px);
+  height: min(80vw, 460px);
+  transform: translate(-50%, -58%);
+  border-radius: 50%;
+  border: 2px solid rgba(232, 100, 28, 0.35);
+  animation: glowRingExpand 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes glowRingExpand {
+  0% {
+    transform: translate(-50%, -58%) scale(0.9);
+    opacity: 0.3;
+    border-color: rgba(232, 100, 28, 0.2);
+  }
+  50% {
+    transform: translate(-50%, -58%) scale(1.05);
+    opacity: 0.7;
+    border-color: rgba(232, 100, 28, 0.5);
+  }
+  100% {
+    transform: translate(-50%, -58%) scale(0.9);
+    opacity: 0.3;
+    border-color: rgba(232, 100, 28, 0.2);
+  }
+}
+
+/* ---------- Hover Enhancement ---------- */
+
+.about-visual img:first-child:hover,
+.about-visual img:nth-child(2):hover {
+  animation-play-state: paused;
+  box-shadow:
+    0 0 35px rgba(232, 100, 28, 0.9),
+    0 0 70px rgba(232, 100, 28, 0.5),
+    inset 0 0 18px rgba(232, 100, 28, 0.35);
+  border-color: var(--color-accent);
+  transform: scale(1.03);
+}
+
+/* ---------- Team Profile Icon Glow ---------- */
+
+/* Glow ring behind team profile icons */
+
+.team-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  opacity: 0.35;
+  animation: orangeGlowPulse 3.5s ease-in-out infinite;
+  box-shadow:
+    0 0 10px rgba(232, 100, 28, 0.25),
+    0 0 20px rgba(232, 100, 28, 0.15);
+  z-index: 0;
+}
+
+.founder-card .team-icon::after {
+  width: 130px;
+  height: 130px;
+}
+
+/* ---------- Hover Glow Enhancement for Team Icons ---------- */
+
+.team-card:hover .team-icon::after {
+  opacity: 0.8;
+  box-shadow:
+    0 0 20px rgba(232, 100, 28, 0.6),
+    0 0 40px rgba(232, 100, 28, 0.4);
+}
+
+/* ---------- Reduced Motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-visual img:first-child,
+  .about-visual img:nth-child(2),
+  .about-visual::before {
+    animation: none !important;
+    box-shadow:
+      0 0 18px rgba(232, 100, 28, 0.45),
+      0 0 36px rgba(232, 100, 28, 0.25);
+  }
+}
