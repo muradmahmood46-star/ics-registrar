@@ -487,40 +487,20 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.out"
     });
 
-    // Dedicated Animation for Excellence Section
-    const whyElements = document.querySelectorAll(".why-layout h2, .why-layout p");
-    if (whyElements.length > 0) {
-      gsap.from(whyElements, {
-        scrollTrigger: {
-          trigger: ".why-layout",
-          start: "top 85%",
-          toggleActions: "play none none none"
-        },
-        y: 30,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.2,
-        ease: "power2.out"
-      });
-    }
-
     // Robust Global Scroll Animations
     const revealElements = gsap.utils.toArray(".reveal-line, .eyebrow, h2, .about-expanded-copy p, .why-layout p, .mv-block p");
     revealElements.forEach(el => {
-      // Skip elements that are part of dedicated animations to prevent conflicts
-      if (!el.closest(".why-layout")) {
-        gsap.from(el, {
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none none none"
-          },
-          y: 25,
-          opacity: 0,
-          duration: 0.45,
-          ease: "power2.out"
-        });
-      }
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none none"
+        },
+        y: 25,
+        opacity: 0,
+        duration: 0.45,
+        ease: "power2.out"
+      });
     });
 
     const scrollServiceCards = gsap.utils.toArray(".service-card");
