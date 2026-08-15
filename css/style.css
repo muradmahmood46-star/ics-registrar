@@ -1775,7 +1775,7 @@ footer {
     min-height: 280px;
   }
   .about-visual img:first-child {
-    margin-top: -2.5rem;
+    margin-top: -0.5rem;
     margin-left: 4.5rem;
     width: min(50vw, 190px);
     height: min(50vw, 190px);
