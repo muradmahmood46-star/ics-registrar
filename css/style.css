@@ -1772,8 +1772,12 @@ footer {
   }
 
   .about-eyebrow {
-    padding-bottom: 0.2rem;
+    padding-bottom: 0;
     margin-bottom: 3.5rem;
+  }
+
+  .about-eyebrow::after {
+    display: none;
   }
 
   .about-visual {
