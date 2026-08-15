@@ -1591,8 +1591,13 @@ footer {
 
 .footer-layout h3 {
   color: var(--color-paper);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin-bottom: 0.8rem;
+}
+
+.footer-layout p,
+.footer-layout a {
+  font-size: 0.85rem;
 }
 
 .footer-layout a {
@@ -1608,6 +1613,8 @@ footer {
 .footer-label {
   color: #f2996a;
   margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .footer-bottom {
@@ -1702,6 +1709,19 @@ footer {
 
   .footer-layout {
     grid-template-columns: 1.25fr 1fr 1fr 1fr;
+  }
+
+  .footer-layout h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-layout p,
+  .footer-layout a {
+    font-size: 0.95rem;
+  }
+
+  .footer-label {
+    font-size: 1rem;
   }
 }
 
