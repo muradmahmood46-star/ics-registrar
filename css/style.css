@@ -24,6 +24,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 img,
@@ -698,16 +700,14 @@ h3 {
 }
 
 .mv-block {
-  padding: 1.5rem 0;
-  border-top: 1px dashed var(--color-line);
+  padding: 2.2rem;
+  background: linear-gradient(180deg, rgba(243, 146, 0, 0.01), rgba(243, 146, 0, 0.05));
+  border: 1px solid rgba(243, 146, 0, 0.12);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.mv-block:first-child {
-  border-top: none;
-  padding-top: 0;
+  box-shadow: 0 8px 30px rgba(15, 43, 36, 0.03);
 }
 
 .mv-block .eyebrow {
@@ -1774,6 +1774,7 @@ footer {
     min-height: 280px;
   }
   .about-visual img:first-child {
+    margin-top: -1.5rem;
     margin-left: 2rem;
     width: min(60vw, 220px);
     height: min(60vw, 220px);
