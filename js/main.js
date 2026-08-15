@@ -2,7 +2,12 @@
 if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
 }
-window.scrollTo(0, 0);
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+setTimeout(() => {
+  window.scrollTo(0, 0);
+}, 100);
 
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
