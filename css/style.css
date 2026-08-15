@@ -71,6 +71,20 @@ h1 {
   font-size: clamp(2.5rem, 5vw, 4.25rem);
 }
 
+/* Text Highlight Classes */
+.hl-primary {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.hl-secondary {
+  color: #1a9e70;
+  font-weight: 600;
+}
+.hl-tertiary {
+  color: #2b7da8;
+  font-weight: 600;
+}
+
 h2 {
   font-size: clamp(2rem, 3.5vw, 2.75rem);
 }
