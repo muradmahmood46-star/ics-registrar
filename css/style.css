@@ -527,13 +527,17 @@ h3 {
 }
 
 .about-visual img:first-child {
+  width: 290px;
   width: min(50vw, 290px);
+  height: 290px;
   height: min(50vw, 290px);
   margin-left: 5.5rem;
 }
 
 .about-visual img:nth-child(2) {
+  width: 240px;
   width: min(38vw, 240px);
+  height: 240px;
   height: min(38vw, 240px);
   position: absolute;
   right: 1.5rem;
@@ -1786,12 +1790,16 @@ footer {
   .about-visual img:first-child {
     margin-top: -2.5rem;
     margin-left: 4.5rem;
+    width: 190px;
     width: min(50vw, 190px);
+    height: 190px;
     height: min(50vw, 190px);
   }
   .about-visual img:nth-child(2) {
     right: 0.5rem;
+    width: 160px;
     width: min(45vw, 160px);
+    height: 160px;
     height: min(45vw, 160px);
     border-width: 4px;
   }
