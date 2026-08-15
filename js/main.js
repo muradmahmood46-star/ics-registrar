@@ -68,10 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (shouldOpen) {
-      targetPanel.scrollIntoView({
-        behavior: prefersReducedMotion ? "auto" : "smooth",
-        block: "start"
-      });
+      setTimeout(() => {
+        targetPanel.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "start"
+        });
+      }, 50);
     }
   };
 
