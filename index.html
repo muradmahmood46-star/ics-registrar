@@ -593,8 +593,8 @@
         if (el.dataset.revealed === "true") continue;
         
         var rect = el.getBoundingClientRect();
-        // Trigger when the element enters 90% of the viewport height
-        if (rect.top < window.innerHeight * 0.9) {
+        // Trigger when the element enters the viewport
+        if (rect.top < window.innerHeight * 1.1) {
           el.dataset.revealed = "true";
           var children = el.querySelectorAll('.reveal-line');
           for (var j = 0; j < children.length; j++) {
@@ -607,6 +607,20 @@
     window.addEventListener('scroll', checkReveal);
     // Run once on load just in case elements are already in view
     checkReveal();
+
+    // Fallback: forcefully reveal everything after 1.5 seconds just in case scroll fails on some mobile devices
+    setTimeout(function() {
+      for (var i = 0; i < containers.length; i++) {
+        var el = containers[i];
+        if (el.dataset.revealed !== "true") {
+          el.dataset.revealed = "true";
+          var children = el.querySelectorAll('.reveal-line');
+          for (var j = 0; j < children.length; j++) {
+            children[j].classList.remove('is-hidden');
+          }
+        }
+      }
+    }, 1500);
   });
   </script>
 </body>
