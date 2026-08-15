@@ -1400,6 +1400,7 @@ h3 {
   border-radius: var(--radius-card);
   padding: 2rem 1.2rem 1.25rem;
   background: var(--color-surface);
+  overflow: hidden;
 }
 
 .quote-mark {
@@ -1767,6 +1768,34 @@ footer {
 
   .primary-cta {
     max-width: none;
+  }
+
+  .about-visual {
+    min-height: 280px;
+  }
+  .about-visual img:first-child {
+    margin-left: 2rem;
+    width: min(60vw, 220px);
+    height: min(60vw, 220px);
+  }
+  .about-visual img:nth-child(2) {
+    right: 0.5rem;
+    width: min(45vw, 160px);
+    height: min(45vw, 160px);
+    border-width: 4px;
+  }
+  .experience-badge {
+    width: 100px;
+    height: 100px;
+    left: 0;
+    bottom: 2rem;
+    padding: 0.5rem;
+  }
+  .experience-badge strong {
+    font-size: 1.1rem;
+  }
+  .experience-badge span {
+    font-size: 0.65rem;
   }
 }
 
