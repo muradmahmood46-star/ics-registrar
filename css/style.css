@@ -725,13 +725,47 @@ h3 {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mv-block::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 15px 40px rgba(15, 43, 36, 0.08);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.mv-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: center;
 }
 
 .mv-block:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 8px 30px rgba(232, 100, 28, 0.1);
+  transform: translateY(-8px);
+  border-color: rgba(15, 43, 36, 0.12);
+}
+
+.mv-block:hover::after {
+  opacity: 1;
+}
+
+.mv-block:hover::before {
+  transform: scaleX(1);
 }
 
 .mv-block .eyebrow {
