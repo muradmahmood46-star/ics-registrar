@@ -1771,11 +1771,16 @@ footer {
     max-width: none;
   }
 
+  .about-eyebrow {
+    padding-bottom: 0.2rem;
+    margin-bottom: 3.5rem;
+  }
+
   .about-visual {
     min-height: 280px;
   }
   .about-visual img:first-child {
-    margin-top: -0.5rem;
+    margin-top: -2.5rem;
     margin-left: 4.5rem;
     width: min(50vw, 190px);
     height: min(50vw, 190px);
