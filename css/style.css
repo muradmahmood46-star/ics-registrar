@@ -705,9 +705,9 @@ h3 {
 
 .mv-block {
   padding: 2.2rem;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 43, 36, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 43, 36, 0.04);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
