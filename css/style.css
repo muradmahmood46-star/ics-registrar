@@ -702,7 +702,7 @@ h3 {
 }
 
 .mission-vision {
-  background: linear-gradient(90deg, rgba(15, 43, 36, 0.02) 0%, rgba(32, 201, 151, 0.25) 100%);
+  background: linear-gradient(90deg, rgba(15, 43, 36, 0.02) 0%, rgba(32, 201, 151, 0.45) 100%);
 }
 
 .mission-vision-layout {
@@ -719,9 +719,9 @@ h3 {
 
 .mv-block {
   padding: 2.2rem;
-  background: #FFFFFF;
-  border: 1px solid rgba(15, 43, 36, 0.08);
-  box-shadow: 0 4px 20px rgba(15, 43, 36, 0.04);
+  background: linear-gradient(180deg, rgba(243, 146, 0, 0.02), rgba(243, 146, 0, 0.08));
+  border: 1px solid rgba(243, 146, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(243, 146, 0, 0.05);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
