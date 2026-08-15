@@ -468,33 +468,6 @@ document.addEventListener("DOMContentLoaded", () => {
       y: 18,
       duration: 0.42,
       delay: 0.15,
-      ease: "power2.out"
-    });
-
-    // Global Scroll Animations for Sections and Text
-    gsap.utils.toArray(".section").forEach(section => {
-      const textElements = section.querySelectorAll(".reveal-line, .eyebrow, h2, .about-expanded-copy p, .why-layout p, .mv-block p");
-      if (textElements.length > 0) {
-        gsap.from(textElements, {
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%"
-          },
-          y: 20,
-          opacity: 0,
-          duration: 0.5,
-          stagger: 0.08,
-          ease: "power2.out"
-        });
-      }
-    });
-
-    // Animate Service Cards
-    gsap.from(".service-card", {
-      scrollTrigger: { trigger: ".services", start: "top 80%" },
-      y: 35,
-      opacity: 0,
-      duration: 0.6,
       stagger: 0.15,
       ease: "power2.out"
     });
