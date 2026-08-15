@@ -473,13 +473,6 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 0.12
     });
 
-    gsap.from(".service-card", {
-      scrollTrigger: { trigger: ".services-grid", start: "top 80%" },
-      y: 24,
-      opacity: 0,
-      duration: 0.46,
-      stagger: 0.08,
-      ease: "power2.out"
     });
 
     gsap.from(".founder-card", {
