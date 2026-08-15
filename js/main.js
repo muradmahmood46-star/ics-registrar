@@ -475,8 +475,6 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 0.12
     });
 
-    });
-
     gsap.from(".founder-card", {
       scrollTrigger: { trigger: ".team-pyramid", start: "top 75%" },
       opacity: 0,
