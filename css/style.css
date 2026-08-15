@@ -1784,8 +1784,12 @@ footer {
     display: none;
   }
 
-  .about-expanded-copy p:nth-child(n+3) {
-    display: none;
+  .about-expanded-copy {
+    gap: 0.5rem;
+  }
+  .about-expanded-copy p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .about-visual {
