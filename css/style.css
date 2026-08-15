@@ -513,6 +513,11 @@ h3 {
   grid-column: 1 / -1;
   position: relative;
   min-height: 420px;
+  order: 2;
+}
+
+.about-copy {
+  order: 1;
 }
 
 .about-visual img {
@@ -928,7 +933,6 @@ h3 {
   border: 1px solid rgba(243, 146, 0, 0.15);
   border-radius: 0;
   padding: 2.2rem;
-  height: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1644,10 +1648,12 @@ footer {
   .about-visual {
     grid-column: 1 / 7;
     min-height: 520px;
+    order: 1;
   }
 
   .about-copy {
     grid-column: 7 / 13;
+    order: 2;
   }
 
   .services-grid {
