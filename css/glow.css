@@ -147,5 +147,6 @@
   .about-visual::before {
     width: min(50vw, 200px);
     height: min(50vw, 200px);
+    left: 40%;
   }
 }
