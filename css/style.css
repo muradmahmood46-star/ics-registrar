@@ -12,7 +12,7 @@
   --font-body: "Inter", sans-serif;
   --font-data: "IBM Plex Mono", monospace;
 
-  --section-space: clamp(5rem, 8vw, 8rem);
+  --section-space: clamp(3.5rem, 8vw, 8rem);
   --radius-card: 4px;
 }
 
@@ -512,7 +512,7 @@ h3 {
 .about-visual {
   grid-column: 1 / -1;
   position: relative;
-  min-height: 420px;
+  min-height: 320px;
 }
 
 .about-copy {
