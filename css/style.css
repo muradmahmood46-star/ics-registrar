@@ -1684,13 +1684,18 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 0.9rem;
   font-size: 0.78rem;
 }
 
-.footer-bottom div {
+.footer-center-text {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex: 1;
 }
 
 @media (min-width: 480px) {
@@ -1904,19 +1909,31 @@ footer {
   }
 
   .footer-bottom {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
     align-items: center;
     text-align: center;
   }
-  .footer-bottom > p:first-child {
-    order: 3;
-    margin-top: 0.5rem;
-    font-size: 0.65rem;
+  .footer-link-left {
+    grid-column: 1 / 2;
+    text-align: left;
   }
-  .footer-bottom > .footer-credit {
+  .footer-link-right {
+    grid-column: 2 / 3;
+    text-align: right;
+  }
+  .footer-center-text {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-center-text > p:first-child {
+    font-size: 0.65rem;
     order: 2;
   }
-  .footer-bottom > div {
+  .footer-center-text > .footer-credit {
     order: 1;
   }
 }
