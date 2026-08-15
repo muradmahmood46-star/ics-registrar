@@ -1836,6 +1836,22 @@ footer {
   .experience-badge span {
     font-size: 0.65rem;
   }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-bottom > p:first-child {
+    order: 3;
+    margin-top: 0.5rem;
+  }
+  .footer-bottom > .footer-credit {
+    order: 2;
+  }
+  .footer-bottom > div {
+    order: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
