@@ -1,3 +1,9 @@
+// Scroll to top on refresh
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -51,6 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", () => toggleMobileNav(true));
     mobileClose.addEventListener("click", () => toggleMobileNav(false));
     mobileLinks.forEach((link) => link.addEventListener("click", () => toggleMobileNav(false)));
+  }
+
+  const mobileSubmenuToggle = document.querySelector(".mobile-submenu-toggle");
+  if (mobileSubmenuToggle) {
+    mobileSubmenuToggle.addEventListener("click", () => {
+      mobileSubmenuToggle.closest(".mobile-submenu").classList.toggle("is-open");
+      const isExpanded = mobileSubmenuToggle.getAttribute("aria-expanded") === "true";
+      mobileSubmenuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
   }
 
   const openServicePanel = (panelId) => {

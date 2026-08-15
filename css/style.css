@@ -1852,6 +1852,7 @@ footer {
   .footer-bottom > p:first-child {
     order: 3;
     margin-top: 0.5rem;
+    font-size: 0.65rem;
   }
   .footer-bottom > .footer-credit {
     order: 2;
