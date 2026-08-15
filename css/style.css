@@ -1801,16 +1801,16 @@ footer {
   }
   .about-visual img:nth-child(2) {
     right: 0.5rem;
-    width: 160px;
-    width: min(45vw, 160px);
-    height: 160px;
-    height: min(45vw, 160px);
+    width: 155px;
+    width: min(44vw, 155px);
+    height: 155px;
+    height: min(44vw, 155px);
     border-width: 4px;
   }
   .experience-badge {
     width: 100px;
     height: 100px;
-    left: 0;
+    left: 0.5rem;
     bottom: 2rem;
     padding: 0.5rem;
   }
