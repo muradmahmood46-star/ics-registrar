@@ -472,6 +472,38 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "power2.out"
     });
 
+    // Robust Global Scroll Animations
+    const revealElements = gsap.utils.toArray(".reveal-line, .eyebrow, h2, .about-expanded-copy p, .why-layout p, .mv-block p");
+    revealElements.forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          toggleActions: "play none none none"
+        },
+        y: 25,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out"
+      });
+    });
+
+    const scrollServiceCards = gsap.utils.toArray(".service-card");
+    scrollServiceCards.forEach((card, index) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 35,
+        opacity: 0,
+        duration: 0.6,
+        delay: (index % 3) * 0.1,
+        ease: "power2.out"
+      });
+    });
+
     const serviceCards = document.querySelectorAll(".service-card");
     serviceCards.forEach((card) => {
       const seal = card.querySelector(".service-seal");
