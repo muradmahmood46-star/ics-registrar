@@ -143,3 +143,9 @@
       0 0 36px rgba(232, 100, 28, 0.25);
   }
 }
+@media (max-width: 767px) {
+  .about-visual::before {
+    width: min(50vw, 200px);
+    height: min(50vw, 200px);
+  }
+}
