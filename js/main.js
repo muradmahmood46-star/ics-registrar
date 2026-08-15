@@ -453,28 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     heroTimeline.to(sealStrokes, { strokeDashoffset: 0, duration: 0.55, stagger: 0.05 }, "-=0.26");
 
-    gsap.from(".about-visual img", {
-      scrollTrigger: { trigger: ".about", start: "top 72%" },
-      x: -20,
-      y: 10,
-      opacity: 0,
-      duration: 0.55,
-      stagger: 0.1,
-      ease: "power2.out"
-    });
-
-
-
-
-    gsap.from(".experience-badge", {
-      scrollTrigger: { trigger: ".about", start: "top 65%" },
-      scale: 0.65,
-      opacity: 0,
-      duration: 0.52,
-      ease: "back.out(1.2)",
-      delay: 0.12
-    });
-
+    // Disabled About Us visual animations to prevent blinking/popping glitch on mobile
     gsap.from(".founder-card", {
       scrollTrigger: { trigger: ".team-pyramid", start: "top 75%" },
       opacity: 0,

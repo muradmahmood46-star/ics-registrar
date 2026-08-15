@@ -1796,17 +1796,17 @@ footer {
     border-width: 4px;
   }
   .experience-badge {
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
     left: 0;
-    bottom: 3.5rem;
-    padding: 0.3rem;
+    bottom: 2rem;
+    padding: 0.5rem;
   }
   .experience-badge strong {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
   .experience-badge span {
-    font-size: 0.55rem;
+    font-size: 0.65rem;
   }
 }
 
