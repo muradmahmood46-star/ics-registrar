@@ -1604,6 +1604,7 @@ footer {
 .footer-layout a {
   display: block;
   margin-bottom: 0.45rem;
+  word-break: break-word;
 }
 
 .footer-layout a:hover,
@@ -1774,10 +1775,10 @@ footer {
     min-height: 280px;
   }
   .about-visual img:first-child {
-    margin-top: -1.5rem;
-    margin-left: 2rem;
-    width: min(60vw, 220px);
-    height: min(60vw, 220px);
+    margin-top: -2.5rem;
+    margin-left: 4.5rem;
+    width: min(50vw, 190px);
+    height: min(50vw, 190px);
   }
   .about-visual img:nth-child(2) {
     right: 0.5rem;
