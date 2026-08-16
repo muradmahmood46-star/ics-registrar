@@ -1045,10 +1045,11 @@ h3 {
 }
 
 .service-image-wrap {
-  margin: -2.2rem -2.2rem 1.2rem -2.2rem;
+  margin-bottom: 1.5rem;
   overflow: hidden;
   position: relative;
   aspect-ratio: 3 / 2;
+  border-radius: 12px;
   border-bottom: 3px solid var(--color-accent);
 }
 
