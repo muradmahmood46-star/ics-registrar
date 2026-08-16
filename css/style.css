@@ -1008,7 +1008,7 @@ h3 {
 .service-card {
   background: linear-gradient(180deg, rgba(243, 146, 0, 0.01), rgba(243, 146, 0, 0.06));
   border: 1px solid rgba(243, 146, 0, 0.15);
-  border-radius: 0;
+  border-radius: 16px;
   padding: 2.2rem;
   position: relative;
   overflow: hidden;
@@ -1042,14 +1042,15 @@ h3 {
   transform: scaleX(0);
   transition: transform 0.4s ease;
   transform-origin: center;
+  z-index: 10;
 }
 
 .service-image-wrap {
-  margin-bottom: 1.5rem;
+  margin: -2.2rem -2.2rem 1.2rem -2.2rem;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 3 / 2;
-  border-radius: 12px;
+  aspect-ratio: 2.2 / 1;
+  border-radius: 0;
   border-bottom: 3px solid var(--color-accent);
 }
 
