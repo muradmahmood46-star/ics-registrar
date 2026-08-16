@@ -1066,6 +1066,18 @@ h3 {
   transform: scale(1.05);
 }
 
+@media (max-width: 767px) {
+  .service-card {
+    padding: 1.4rem;
+    gap: 1rem;
+  }
+  .service-image-wrap {
+    margin: -0.6rem -1.4rem 1rem -1.4rem;
+    aspect-ratio: 2.5 / 1;
+    border-radius: 8px;
+  }
+}
+
 .service-card:hover,
 .service-card.is-hovered {
   transform: translateY(-8px);
